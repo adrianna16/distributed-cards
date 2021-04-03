@@ -1,6 +1,5 @@
 html {
   box-sizing: border-box;
-  font-family: georgia;
   line-height: 1.5;
 }
 
@@ -14,25 +13,43 @@ img {
 
 body {
   margin: 0;
+  max-width: 60em;
 }
 
 main {
   background-color: #f5f2f0;
-  margin; 1.5rem;
+  font-family: georgia;
   padding: 1rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-h1, h2 {
-  font-family: denk one;
+h1 {
+  font-family: "Denk One";
   color: #623b0c;
+  margin-top: .25rem;
+  margin-bottom: .25rem;
+}
+
+h2 {
+  font-family: "Denk One";
+  color: #623b0c;
+  padding-bottom: .3em;
+  margin-top: .25rem;
 }
 
 ol li {
   list-style-type: none;
   border: 2px solid #623b0c;
   border-radius: 8px;
-  padding: .5em .75em .6em;
+  padding: 1rem;
   background-color: #ede3db;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 ol li a {
@@ -44,15 +61,25 @@ ol li a {
   border-radius: 8px;
 }
 
+ol p {
+  flex-grow: 1;
+  padding-bottom: .5rem;
+}
+
+ol img {
+  margin-top: -.35rem;
+  margin-bottom: .35rem;
+}
+
 ol {
   padding: 0;
 
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
+  justify-content: center;
 
- ol li {
-   width: 20em;
-   padding: 1rem;
- }
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "li li"
+    "li li";
+}
